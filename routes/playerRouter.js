@@ -3,6 +3,7 @@ const bodyParser = require("body-parser");
 const playerController = require("../controllers/playerController");
 const playerRouter = express.Router();
 playerRouter.use(bodyParser.json());
+
 playerRouter
   .route("/")
   .get(playerController.index)

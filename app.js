@@ -12,8 +12,8 @@ const connect = mongoose.connect(url);
 var indexRouter = require("./routes/index");
 var playerRouter = require("./routes/playerRouter");
 var nationRouter = require("./routes/nationRouter");
+var userRouter = require("./routes/userRouter");
 const players = require("./models/players");
-const accountRouter = require("./routes/accountRouter");
 
 connect.then(
   (db) => {
@@ -39,7 +39,7 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use("/", indexRouter);
 app.use("/player", playerRouter);
 app.use("/nation", nationRouter);
-app.use("/account", accountRouter);
+app.use("/user", userRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
