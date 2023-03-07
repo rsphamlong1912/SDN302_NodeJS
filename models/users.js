@@ -12,6 +12,12 @@ var userSchema = new Schema(
       type: String,
       required: true,
     },
+    name: {
+      type: String,
+    },
+    yob: {
+      type: String,
+    },
     isAdmin: {
       type: Boolean,
       default: false,
